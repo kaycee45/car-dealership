@@ -13,7 +13,7 @@ class App extends Component {
 		params : {
 			'api-key': '95bb8488-a59a-4322-a670-73e2f7c16bd7'
 		},
-		groups : ['default','category', 'manufacturer', 'model', 'fuel-type', 'transmission', 'variant', 'product'],
+		groups : ['default','category', 'manufacturer', 'model', 'fuel', 'transmission', 'variant', 'product'],
 		options : [],
 		result: []
 	}
@@ -60,7 +60,6 @@ class App extends Component {
 		next = this.state.groups[nextIndex];
 		
 		let p = next+"-id";
-		if(next == "fuel-type") p = next;
 		
 		let param = this.state.params;
 		param[p] = id;
